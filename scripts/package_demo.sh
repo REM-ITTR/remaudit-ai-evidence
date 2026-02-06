@@ -6,12 +6,13 @@ MEMO="docs/REMAudit-AI_Incident_Evidence_Memorandum.pdf"
 
 mkdir -p "$OUTDIR"
 
+# Pick newest by modified time (works even if timestamps differ lexicographically)
 latest_dir () {
   local pattern="$1"
-  ls -1d $pattern 2>/dev/null | sort | tail -n 1
+  ls -1dt $pattern 2>/dev/null | head -n 1
 }
 
-PACK="$(latest_dir runs/REMAuditAI_INCIDENT_*)"
+PACK="$(latest_dir "runs/REMAuditAI_INCIDENT_*")"
 if [ -z "${PACK:-}" ]; then
   echo "ERROR: No evidence pack found under runs/REMAuditAI_INCIDENT_*"
   echo "Run:"
@@ -19,12 +20,13 @@ if [ -z "${PACK:-}" ]; then
   exit 1
 fi
 
-# Prefer a matching UPDATES diff for the same pack if present; otherwise pick latest diff pack
+# Prefer matching updates diff for same pack name; otherwise choose newest diff pack
 BASENAME="$(basename "$PACK")"
 UPDATES="runs/UPDATES_DIFF_${BASENAME}"
 if [ ! -d "$UPDATES" ]; then
-  UPDATES="$(latest_dir runs/UPDATES_DIFF_REMAuditAI_INCIDENT_*)"
+  UPDATES="$(latest_dir "runs/UPDATES_DIFF_REMAuditAI_INCIDENT_*")"
 fi
+
 if [ -z "${UPDATES:-}" ] || [ ! -d "$UPDATES" ]; then
   echo "ERROR: No updates-diff pack found under runs/UPDATES_DIFF_REMAuditAI_INCIDENT_*"
   echo "Run:"
@@ -37,6 +39,7 @@ if [ ! -f "$MEMO" ]; then
   echo "MEMO PDF missing, generating via scripts/make_memo_pdf.sh..."
   ./scripts/make_memo_pdf.sh
 fi
+
 if [ ! -f "$MEMO" ]; then
   echo "ERROR: MEMO PDF not found: $MEMO"
   exit 1
