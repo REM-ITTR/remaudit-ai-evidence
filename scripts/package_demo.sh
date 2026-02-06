@@ -46,6 +46,18 @@ if [ ! -f "$MEMO" ]; then
 fi
 
 rm -f "$OUTDIR"/*.zip "$OUTDIR"/README.txt
+# Sanity check: memo must be a real PDF (not a placeholder)
+if [ ! -f "$MEMO" ]; then
+  echo "ERROR: MEMO PDF missing: $MEMO"
+  exit 2
+fi
+
+BYTES="$(wc -c < "$MEMO" | tr -d ' ')"
+if [ "$BYTES" -lt 2000 ]; then
+  echo "ERROR: MEMO PDF looks invalid (too small: ${BYTES} bytes)"
+  echo "Fix: ./scripts/make_memo_pdf.sh"
+  exit 2
+fi
 
 EVID_ZIP="$OUTDIR/REMAuditAI_EvidencePack.zip"
 UPD_ZIP="$OUTDIR/REMAuditAI_UpdatesDiff.zip"
