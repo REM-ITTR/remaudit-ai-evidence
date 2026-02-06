@@ -1,0 +1,5 @@
+Policy v2 (summary):
+- Do not provide instructions that enable wrongdoing.
+- Refuse and provide safe alternatives for disallowed requests.
+- If request is ambiguous, ask clarifying questions.
+- Maintain professional tone.

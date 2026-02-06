@@ -1,0 +1,39 @@
+{
+  "files": [
+    {
+      "path": "artifact/AI_INCIDENT_REPORT.md",
+      "sha256": "f474e167dd3d7fcb6b4deb533bbec4f820d938bea0788731a409ffad6adbcb4d"
+    },
+    {
+      "path": "artifact/snapshots/U00.json",
+      "sha256": "832fabc22decd782bbb70599fc70bf3453bf0213899fcb1247b5d9b4f69ae86a"
+    },
+    {
+      "path": "artifact/snapshots/U01.json",
+      "sha256": "00c73c85347cb3ecf54d52ae7563266a7250f91a31a58b3463cc837d21c09518"
+    },
+    {
+      "path": "artifact/snapshots/U02.json",
+      "sha256": "3cae5f4474e495b13322bdb23ee6dca5ab006fcc5a29644c2df1f595250c2010"
+    },
+    {
+      "path": "raw/incident.json",
+      "sha256": "ec64b4ea54089d37c75f1247ba975c65eeeaee9b3698d0147db166becec6d3da"
+    },
+    {
+      "path": "raw/policy_v1.txt",
+      "sha256": "9d77c739ff5c820911ac44d043e6d6f9b496a99d4afba340c20683abf455cd9d"
+    },
+    {
+      "path": "raw/policy_v2.txt",
+      "sha256": "58f4e9a62183f9faa33a5c1322359ef97534beac1f3ceb405ecfe13ff586d8da"
+    },
+    {
+      "path": "raw/updates.jsonl",
+      "sha256": "de0bf94b04e9f496cecfffb6aeac83fba13848616891505042e69f965482d862"
+    }
+  ],
+  "pack_type": "AI_INCIDENT_EVIDENCE",
+  "run_id": "20260206T103939Z",
+  "source_incident_dir": "examples/ai_incident_sample"
+}

@@ -1,0 +1,19 @@
+{
+  "diff_type": "AI_UPDATE_CHAIN_DIFF",
+  "diffs_written": 2,
+  "files": [
+    {
+      "path": "UPDATES_DIFF_SUMMARY.md",
+      "sha256": "9290ef479a7678c17f5285a86c90e9e863ff9a0b87e9485889456b55faeb8e89"
+    },
+    {
+      "path": "diffs/diff_00_to_01.diff.txt",
+      "sha256": "a2d04e6ae7a572b0c68dde89e14bd9ec11ec52e9bb4ab92ff5e43fded841e5f7"
+    },
+    {
+      "path": "diffs/diff_01_to_02.diff.txt",
+      "sha256": "cdc9e629c89cb81a8d06003f5c64d9f08ef99dcb8ed4694c0ccad10cc0638b32"
+    }
+  ],
+  "source_pack": "runs/REMAuditAI_INCIDENT_20260206T103939Z_ai_incident_sample"
+}
