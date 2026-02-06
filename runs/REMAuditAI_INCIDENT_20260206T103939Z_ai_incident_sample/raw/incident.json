@@ -1,8 +1,0 @@
-{
-  "incident_id": "ai-demo-001",
-  "title": "AI Assistant Response Drift After Policy Update",
-  "system": "Internal Support Assistant",
-  "date_utc": "2026-02-05",
-  "scope": "post-hoc evidence pack from provided artifacts (no internal logs)",
-  "notes": "Demonstration incident: outputs change across updates; policy text evolves."
-}
