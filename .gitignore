@@ -8,3 +8,8 @@ venv/
 runs/
 dist/
 *.zip
+
+# generated memo outputs
+docs/*.pdf
+docs/memo.html
+docs/*.rtf
